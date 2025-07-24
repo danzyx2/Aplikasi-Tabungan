@@ -57,7 +57,53 @@ Jurnal keuangan saku Anda yang sederhana namun kuat! Catat setiap setoran dan pe
 Secara default, aplikasi akan mencoba menyimpan file `riwayat_tabungan.csv` di jalur ini:
 `/sdcard/aplikasi/tabungan/riwayat_tabungan.csv`
 
-Anda bisa mengubah lokasi penyimpanan ini di baris kode berikut pada `main.py` jika diperlukan:
+Anda bisa mengubah lokasi penyimpanan ini di baris kode berikut pada `tabungan.py` jika diperlukan:
 
 ```python
 PENYIMPANAN_EKSTERNAL = "/sdcard/aplikasi/tabungan" # Ubah path ini!
+```
+
+---
+
+## 🚀 Langkah-Langkah Awal (Mulai Pakai)
+
+### 1. Dapatkan Kodenya
+
+Jika Anda mendapatkan file `tabungan.py` ini secara terpisah, Anda bisa langsung lompat ke langkah 2.
+
+### 2. Siapkan Lingkungan Anda
+
+#### a. Untuk Pengguna Desktop (Linux/macOS/Windows)
+
+1.  **Instal Python 3**: Jika belum ada, unduh dan instal Python 3 dari [python.org](https://www.python.org/downloads/).
+2.  **Buka Terminal/Command Prompt**: Navigasikan ke folder tempat Anda menyimpan `tabungan.py`.
+
+#### b. Untuk Pengguna Android (via Termux)
+
+1.  **Unduh Termux**: Instal aplikasi [Termux](https://termux.com/) dari Google Play Store atau F-Droid.
+2.  **Perbarui Paket**: Setelah membuka Termux, jalankan:
+    ```bash
+    pkg update && pkg upgrade
+    ```
+3.  **Instal Python**:
+    ```bash
+    pkg install python
+    ```
+4.  **Berikan Izin Penyimpanan**:
+    ```bash
+    termux-setup-storage
+    ```
+    Ikuti prompt untuk memberikan izin. Ini akan membuat folder `storage` di direktori Termux Anda, dan Anda dapat mengakses penyimpanan internal Anda melalui `~/storage/shared`.
+5.  **Pindahkan File**: Pindahkan file `tabungan.py` ke folder yang mudah diakses di Termux (misalnya, `~/storage/shared/Download/`).
+6.  **Navigasi ke Folder File**:
+    ```bash
+    cd storage/shared/Download/ # Sesuaikan dengan lokasi file Anda
+    ```
+
+### 3. Jalankan Aplikasinya!
+
+Setelah persiapan selesai, jalankan aplikasi dengan perintah:
+
+```bash
+python tabungan.py
+```
